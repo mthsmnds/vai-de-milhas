@@ -40,25 +40,6 @@ export function createExecutiveTrip(): Trip {
 }
 
 
-export function createFirstClassTrip(): Trip {
-  return {
-    code: faker.string.alphanumeric(6).toUpperCase(),
-    origin: {
-      lat: faker.location.latitude(),
-      long: faker.location.longitude(),
-    },
-    destination: {
-      lat: faker.location.latitude(),
-      long: faker.location.longitude(),
-    },
-    miles: false,
-    plane: faker.vehicle.model(),
-    service: ServiceClass.FIRST_CLASS,
-    affiliate: AffiliateStatus.BRONZE,
-    date: faker.date.recent().toString(),
-  };
-}
-
 export function createTripPaidWithMiles(): Trip {
   return {
     code: faker.string.alphanumeric(6).toUpperCase(),
